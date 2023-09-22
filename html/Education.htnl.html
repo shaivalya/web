@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Children's Rights Education</title> 
+  <link rel="stylesheet" href="styles.css"> 
+ <style type="text/css" id="dcoder_stylesheet">/* Add this CSS code to your styles.css file */
+ 
+a:hover, button:hover, img:hover {
+    background-color: #ffcc00; /* Change to a different color */
+    transform: scale(1.1); /* Add a subtle scale effect */
+    transition: 0.3s ease; /* Smooth transition */
+}
+
+/* Example: Smooth transition for color changes */
+element {
+    transition: background-color 0.3s ease;
+}
+
+/* Style the dropdown menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style the accordion panels */
+.accordion {
+    display: none;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+/* Show the panel when the button is clicked */
+.button.active + .accordion {
+    display: block;
+}
+
+/* Example: Background color transition on scroll */
+section {
+    background-color: #fff; /* Initial background color */
+    transition: background-color 0.5s ease;
+}
+
+section:hover {
+    background-color: #f1f1f1; /* Change to a different color on hover */
+}
+
+/* Style for image gallery */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Add hover effect to images in the gallery */
+.image-gallery img:hover {
+    opacity: 0.7; /* Reduce opacity on hover */
+    transition: opacity 0.3s ease;
+}
+
+
+
+
+/* Style the header */
+header {
+  background-color: #009688;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the navigation menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #009688;
+  font-weight: bold;
+}
+
+/* Style the sections */
+section {
+  padding: 20px;
+}
+
+/* Style the "Show Information" button */
+#showInfoButton {
+  background-color: #009688;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style the "Undo" button */
+#undoButton {
+  background-color: #FF5722;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style the article links */
+#rights ul li {
+  margin-bottom: 10px;
+}
+
+#rights ul li a {
+  text-decoration: none;
+  color: #009688;
+}
+
+/* Style the tab buttons */
+.tab button {
+  background-color: #009688;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+}
+
+/* Style the contact form */
+#contactForm {
+  margin-top: 20px;
+}
+
+#contactForm label {
+  font-weight: bold;
+}
+
+#contactForm input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+#contactForm input[type="submit"] {
+  background-color: #009688;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style the "Show More" button */
+#toggleContent {
+  background-color: #009688;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style for the popup/modal */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Style for the close button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* Style the footer */
+footer {
+  background-color: #009688;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #007acc;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation Menu Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007acc;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #004e80;
+}
+
+/* Section Headings */
+h2 {
+    color: #007acc;
+}
+
+/* Contact Form Styles */
+#contactForm {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contactForm label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#contactForm input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contactForm input[type="submit"] {
+    background-color: #007acc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contactForm input[type="submit"]:hover {
+    background-color: #004e80;
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+</style></head> 
+ <body> 
+  <header> 
+   <h1> <marquee behavior="scroll" direction="left">
+      Welcome to Children's Rights Education 
+    </marquee></h1> 
+  </header> 
+  <nav> 
+   <ul> 
+    <li><a href="#home">Home</a></li> 
+    <li><a href="#about">About Us</a></li> 
+    <li><a href="#rights">Children's Rights</a></li> 
+    <li><a href="#resources">Resources</a></li> 
+    <li><a href="#contact">Contact</a></li> 
+   </ul> 
+  </nav> 
+  <section id="home"> 
+   <h2>Empowering Children with Knowledge</h2> 
+   <p>We are dedicated to educating children in India about their rights and increasing their legal literacy and awareness.</p> 
+   <p>By conducting</p> 
+   <li>Education Programs</li> 
+   <li>Collaboration with schools</li> 
+   <li>Awareness campaigns </li> 
+   <li>Hot lines and Helplines </li> 
+  </section> 
+  <section id="about"> 
+   <h2>About Us</h2> 
+   <p>Select a team member to learn more:</p> <select id="teamMembers"> <option value="member1">Team Member 1</option> <option value="member2">Team Member 2</option> <option value="member3">Team Member 3</option> <option value="member4">Team Member 4</option> <option value="member5">Team Member 5</option> <option value="member6">Team Member 6</option> </select> 
+   <div id="selectedMemberInfo" style="display: none;"> <!-- Information about the selected team member will appear here --> 
+   </div> <button id="showInfoButton">Show Information</button> <button id="undoButton" style="display: none;">Undo</button> 
+  </section> 
+  <script>
+        // Get references to the select element, the div, and the buttons
+        const teamMembersSelect = document.getElementById("teamMembers");
+        const selectedMemberInfo = document.getElementById("selectedMemberInfo");
+        const showInfoButton = document.getElementById("showInfoButton");
+        const undoButton = document.getElementById("undoButton");
+
+        // Define a variable to keep track of the previous display state
+        let previousDisplayState = "none";
+
+        // Define an object with information about each team member
+        const teamMemberInfo = {
+            member1: {
+                name: "Team Member 1",
+                bio: "Pooja CSD-B(Captain)",
+            },
+            member2: {
+                name: "Team Member 2",
+                bio: "Jahnavi CSD-B",
+            },
+            member3: {
+                name: "Team Member 3",
+                bio: "Shaivalya CSD-B",
+            },
+            member4: {
+                name: "Team Member 4",
+                bio: "Mahesh Anand CSD-B",
+            },
+            member5: {
+                name: "Team Member 5",
+                bio: "Koushik CSD-B",
+            },
+            member6: {
+                name: "Team Member 6",
+                bio: "Navya Sri CSD-B",
+            },
+        };
+
+        // Function to display the selected team member's information
+        function displayMemberInfo() {
+            const selectedValue = teamMembersSelect.value;
+            const selectedInfo = teamMemberInfo[selectedValue];
+            if (selectedInfo) {
+                previousDisplayState = selectedMemberInfo.style.display; // Store the previous display state
+                selectedMemberInfo.innerHTML = `<h3>${selectedInfo.name}</h3><p>${selectedInfo.bio}</p>`;
+                selectedMemberInfo.style.display = "block"; // Show the information
+                showInfoButton.style.display = "none"; // Hide the "Show Information" button
+                undoButton.style.display = "inline-block"; // Show the "Undo" button
+            }
+        }
+
+        // Function to undo and hide the team member's information
+        function undo() {
+            selectedMemberInfo.style.display = previousDisplayState; // Restore the previous display state
+            showInfoButton.style.display = "inline-block"; // Show the "Show Information" button
+            undoButton.style.display = "none"; // Hide the "Undo" button
+        }
+
+        // Add event listeners to the select element and buttons
+        teamMembersSelect.addEventListener("change", displayMemberInfo);
+        showInfoButton.addEventListener("click", displayMemberInfo);
+        undoButton.addEventListener("click", undo);
+    </script> 
+  <section id="rights"> 
+   <h2>Children's Rights</h2> 
+   <p>Click on the articles to explore your rights as a child in India:</p> <!-- List of Articles from the Indian Constitution with unique IDs --> 
+   <ul> 
+    <li><a href="#" id="article15">Article 15(3): Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth</a></li> 
+    <li><a href="#" id="article21A">Article 21-A: Right to Education</a></li> 
+    <li><a href="#" id="article24">Article 24: Prohibition of employment of children in factories, etc.</a></li> 
+    <li><a href="#" id="article39">Article 39: Certain principles of policy to be followed by the State</a></li> 
+    <li><a href="#" id="article45">Article 45: Provision for early childhood care and education</a></li> 
+    <li><a href="#" id="article51A">Article 51-A: Fundamental Duties</a></li> 
+    <li><a href="#" id="article14">Article 14: Equality before law</a></li> 
+    <li><a href="#" id="article17">Article 17: Abolition of untouchability</a></li> 
+    <li><a href="#" id="article19">Article 19: Protection of certain rights regarding freedom of speech, etc.</a></li> 
+    <li><a href="#" id="article32">Article 32: Remedies for enforcement of rights conferred by this Part</a></li> 
+    <li><a href="#" id="article41">Article 41: Right to work, to education and to public assistance in certain cases</a></li> 
+    <li><a href="#" id="article46">Article 46: Promotion of educational and economic interests of Scheduled Castes, Scheduled Tribes, and other weaker sections</a></li> <!-- Add more articles as needed --> 
+   </ul> <!-- Container to display the selected article --> 
+   <div id="articleContainer"> <!-- Article content will appear here --> <button id="undoButton" style="display: none;">Undo</button> 
+   </div> 
+  </section> 
+  <section id="resources"> 
+   <h2>Resources</h2> 
+   <p>Access articles, videos, games, and quizzes to increase your legal knowledge.</p> 
+   <h3>Videos</h3> 
+   <ul> 
+    <li><a href="https://youtu.be/HHNfaPuoZHM?feature=shared" target="_blank">What are Child rights</a></li> 
+    <li><a href="https://youtu.be/PTC6EsYqr8Q?feature=shared" target="_blank">Need to know about child rights</a></li> 
+   </ul> <!-- Tab buttons for Quizzes and Games --> 
+   <div class="tab"> <button class="tablinks" onclick="openTab(event, 'quizzes')">Quizzes</button> <button class="tablinks" onclick="openTab(event, 'games')">Games</button> 
+   </div> <!-- Quizzes section --> 
+   <div id="quizzes" class="tabcontent"> 
+    <h3>Quizzes</h3> 
+    <ul> 
+     <li><a href="https://quizizz.com/admin/quiz/5d581138e33cb2001b04485d/quiz-childrens-rights-for-ngo" target="_blank">Quiz 1: Children's Rights</a></li> 
+     <li><a href="https://study.com/academy/practice/quiz-worksheet-impact-of-child-labor.html" target="_blank">Quiz 2: Child Rights Awareness</a></li> <!-- Add more quiz links here --> 
+    </ul> 
+   </div> <!-- Games section --> 
+   <div id="games" class="tabcontent"> 
+    <h3>Games</h3> 
+    <ul> 
+     <li><a href="https://playspent.org/l" target="_blank">Game 1: Rights Adventure</a></li> 
+     <li><a href="http://www.youth-egames.org/games/ffr/ffr.html" target="_blank">Game 2: Rights Challenge</a></li> 
+     <li><a href="https://legacy.gamesforchange.org/play/against-all-odds/" target="_blank">Game 3: Rights Quest</a></li> 
+     <li><a href="https://www.icrc.org/en/document/choosing-humanity-new-video-and-online-game-challenge-us-confront-how-numb-we-have-become-0" target="_blank">Game 4: Rights Exploration</a></li> <!-- Add more game links here --> 
+    </ul> 
+   </div> 
+  </section> 
+  <section id="contact"> 
+   <h2>Contact Us</h2> 
+   <p>If you have questions or need assistance, please reach out to us.</p> 
+   <form id="contactForm"> <label for="Name">Query:</label> 
+    <input type="text" id="name" name="name" required> 
+    <br> <label for="email">Email: xyz@gmail.com </label> 
+    <br> 
+    <br>
+   <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-button" onclick="closePopup()">×</span>
+            <h2>Thank You!</h2>
+            <p>Your Query has been submitted successfully.</p>
+        </div>
+    </div>
+    </form></section>
+  <section id="Scope"> 
+   <h2>Future Scope</h2> 
+   <p>The future scope of a platform designed to increase awareness of child rights through gamification is promising and can evolve in various ways:</p> <button id="toggleContent">Show More</button> 
+   <ul id="futureScopeList" style="display: none;"> 
+    <li>Expanded Content</li> 
+    <li>Advanced Technology</li> 
+    <li>Global Partnerships</li> 
+    <li>Localized Versions</li> 
+    <li>Advocacy and Action</li> 
+    <li>Data Insights</li> 
+    <li>Continuous Innovation</li> 
+    <li>Social Impact metrics</li> <!-- Add more items here --> 
+   </ul> 
+  </section> 
+  <script src="script.js"></script> 
+  <footer> 
+   <p>© 2023 Children's Rights Education</p> 
+  </footer> 
+ 
+<script type="text/javascript" id="dcoder_script">// JavaScript for dynamically displaying articles
+
+// Get references to the articles and article container
+const article15 = document.getElementById("article15");
+const article21A = document.getElementById("article21A");
+const article24 = document.getElementById("article24");
+const articleContainer = document.getElementById("articleContainer");
+
+// Add click event listeners to the article links
+article15.addEventListener("click", () => {
+    displayArticle("Article 15(3): Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth", "Article 15(3) of the Indian Constitution prohibits discrimination on various grounds.");
+});
+
+article21A.addEventListener("click", () => {
+    displayArticle("Article 21-A: Right to Education", "Article 21-A of the Indian Constitution guarantees the right to education for children between the ages of 6 and 14.");
+});
+
+article24.addEventListener("click", () => {
+    displayArticle("Article 24: Prohibition of employment of children in factories, etc.", "Article 24 of the Indian Constitution prohibits the employment of children under 14 years in factories, mines, or hazardous employment.");
+});
+article39.addEventListener("click", () => {
+    displayArticle("Article 39:all the citizens irrespective of their sex whether men or women shall equally have the right to adequate means of livelihood. [Article 39(a) of the Indian Constitution] That the resources and the ownership of those resources and materials shall be distributed in such a way that it fulfils the common goal.");
+});
+article45.addEventListener("click", () => {
+    displayArticle("Article 45: talks about the provision for free and compulsory education for children.");
+});
+article51A.addEventListener("click", () => {
+    displayArticle("Article 51A: Fundamental duties.", " to abide by the Constitution and respect its ideals and institutions, the National Flag and the National Anthem. .");
+});
+article14.addEventListener("click", () => {
+    displayArticle("Article 14:of the Constitution of India reads as under: “The State shall not deny to any person equality before the law or the equal protection of the laws within the territory of India.” .");
+});
+article17.addEventListener("click", () => {
+    displayArticle("Article 17: Abolition of Untouchability", " The enforcement of any disability arising out of untouchability shall be an offence punishable in accordance with law.");
+});
+article19.addEventListener("click", () => {
+    displayArticle("Article 19: Freedom of Speech and Expression", "Article 24 of the Indian Constitution prohibits the employment of children under 14 years in factories, mines, or hazardous employment.");
+});
+article32.addEventListener("click", () => {
+    displayArticle("Article 32: Under Article 32 of the Indian constitution, every citizen of India has been given the right to seek constitutional remedy from the Supreme Court if they have been deprived of their fundamental rights.");
+});
+article41.addEventListener("click", () => {
+    displayArticle("Article 41:of the Indian Constitution directs the state to secure the right to work, education and public assistance in certain cases such as unemployment, old age, sickness and disablement. It is one of the Directive Principles of State Policy based on Socialist principles..");
+});
+article46.addEventListener("click", () => {
+    displayArticle("Article 46: The Slate shall promote with special care the educational and economic interests of the weaker sections of the people, and, in particular, of the Scheduled Castes and the Scheduled Tribes, and shall protect them from social injustice and all forms of exploitation..");
+});
+// Function to display the selected article
+function displayArticle(title, content) {
+    // Hide any previously displayed articles
+    articleContainer.style.display = "none";
+    
+    // Update the content of the article container
+    articleContainer.innerHTML = `<h3>${title}</h3><p>${content}</p>`;
+    
+    // Show the article container
+    articleContainer.style.display = "block";
+    
+    // Remove the "active" class from all links
+    const articleLinks = document.querySelectorAll("ul li a");
+    articleLinks.forEach(link => link.classList.remove("active"));
+    
+    // Add the "active" class to the clicked link
+    event.target.classList.add("active");
+}
+// Function to open the selected tab
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Open the "Quizzes" tab by default
+document.getElementById("quizzes").style.display = "block";
+
+document.addEventListener("DOMContentLoaded", function() {
+    var toggleButton = document.getElementById("toggleContent");
+    var futureScopeList = document.getElementById("futureScopeList");
+
+    toggleButton.addEventListener("click", function() {
+        if (futureScopeList.style.display === "none") {
+            futureScopeList.style.display = "block";
+            toggleButton.textContent = "Show Less";
+        } else {
+            futureScopeList.style.display = "none";
+            toggleButton.textContent = "Show More";
+        }
+    });
+});
+
+// Get references to the form and the popup
+const contactForm = document.getElementById("contactForm");
+const popup = document.getElementById("popup");
+
+// Function to display the popup
+function displayPopup() {
+    popup.style.display = "block";
+}
+
+// Function to close the popup
+function closePopup() {
+    popup.style.display = "none";
+}
+
+// Event listener for form submission
+contactForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the form from submitting
+    displayPopup(); // Display the popup
+    // You can also add additional logic here to handle form submission, e.g., sending data to a server.
+});
+
+</script></body></html>
